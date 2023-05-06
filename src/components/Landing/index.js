@@ -32,7 +32,13 @@ export default function Landing() {
             Shop Now
           </button>
         </div>
-        <div className={`${styles.landingImg} ${scrollPosition > 199 ? styles.landingAnimate : ''}`} />
+        <div
+          className={`
+            ${styles.landingImg}
+            ${scrollPosition > 199 ? styles.landingAnimate : ''}
+          `}
+          style={{ display: scrollPosition > 1583 ? "none" : "" }}
+        />
       </div>
     </div>
   )

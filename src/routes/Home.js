@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Landing />
-      <div style={{height:"250vh"}} />
+      <div style={{ height: "200vh" }} />
       <LeftGif />
     </div>
   )

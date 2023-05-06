@@ -14,6 +14,7 @@ export default function App() {
   };
   React.useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
+    console.log(scrollPosition)
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -22,7 +23,7 @@ export default function App() {
     <div>
       <div className={styles.background} />
 
-      <Parallax style={{ overflow: scrollPosition < 2415 ? 'hidden' : "auto" }} pages={4}>
+      <Parallax style={{ overflow: scrollPosition < 1584 ? 'hidden' : "auto" }} pages={4}>
         <ParallaxLayer speed={3} offset={-0.5} sticky={{ start: 0.5, end: 4 }} style={{
           ...alignCenter,
           alignItems: 'end',
