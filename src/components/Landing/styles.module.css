@@ -1,0 +1,100 @@
+
+.circle {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle:before {
+  border: 4px solid #f89901;
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 400px;
+  width: 400px;
+  transition: .75s;
+  transition-timing-function: cubic-bezier(0.075, 0.660, 0.275, 0.970);
+}
+
+.circle.circleAnimate:before {
+  height: 600px;
+  width: 600px;
+  transition: 1s .15s;
+  transition-timing-function: cubic-bezier(0.075, 0.660, 0.275, 0.970);
+}
+
+.bodyClass {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  width: 75%;
+  top: -40px;
+  transform: scale(.5);
+  opacity: 0;
+  transition: opacity .15s, transform .75s;
+  transition-timing-function: cubic-bezier(0.075, 0.660, 0.275, 0.970);
+}
+.bodyClass.bodyAnimate {
+  transform: scale(1);
+  opacity: 1;
+  transition: 1s .25s;
+  transition-timing-function: cubic-bezier(0.075, 0.660, 0.275, 0.970);
+}
+
+.imgContainer {
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landingImg {
+  position: absolute;
+  inset: 0;
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  background-image: url("../../assets/images/landing-capsule.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: bottom .75s, opacity 0s, background-image 0s 0s, right 0s, height 0s, width 0s, top 0s;
+  transition-timing-function: cubic-bezier(0.075, 0.660, 0.275, 0.970);
+}
+
+.landingAnimate {
+  bottom: -1000px;
+  height: 900px;
+  width: 900px;
+  top: -475px;
+  right: -15px;
+  background-image: url("../../assets/images/image-36.png");
+  transition: bottom .9s, background-image 0s 1s, right 0s 1s, height 0s 1s, width 0s 1s, top 0s 1s;
+  transition-timing-function: cubic-bezier(0.075, 0.660, 0.275, 0.970);
+}
+
+.buttonClass {
+  background-color: #f89901!important;
+  border: none;
+  margin-left: 22px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 32px;
+  padding: 1.25rem 2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: auto;
+}
+.buttonClass:hover {
+  opacity: .75;
+  transition: .5s;
+}
